@@ -1,0 +1,22 @@
+2021-06-11T21:13:11+00:00 CRITICAL Uncaught TypeError: array_keys(): Argument #1 ($array) must be of type array, bool given in C:\xampp\htdocs\fxbillio\wp-content\plugins\reviewx\app\Controllers\Admin\Rating\ProductRating.php:65
+Stack trace:
+#0 C:\xampp\htdocs\fxbillio\wp-content\plugins\reviewx\app\Controllers\Admin\Rating\ProductRating.php(65): array_keys(false)
+#1 C:\xampp\htdocs\fxbillio\wp-content\plugins\reviewx\app\Controllers\Admin\Rating\ProductRating.php(33): ReviewX\Controllers\Admin\Rating\ProductRating->prepareCriterias()
+#2 C:\xampp\htdocs\fxbillio\wp-content\plugins\reviewx\app\Controllers\Admin\Rating\ProductRating.php(24): ReviewX\Controllers\Admin\Rating\ProductRating->storeOption(NULL)
+#3 C:\xampp\htdocs\fxbillio\wp-includes\class-wp-hook.php(292): ReviewX\Controllers\Admin\Rating\ProductRating->addRatingOption('publish', 'new', NULL)
+#4 C:\xampp\htdocs\fxbillio\wp-includes\class-wp-hook.php(316): WP_Hook->apply_filters(NULL, Array)
+#5 C:\xampp\htdocs\fxbillio\wp-includes\plugin.php(484): WP_Hook->do_action(Array)
+#6 C:\xampp\htdocs\fxbillio\wp-includes\post.php(5014): do_action('transition_post...', 'publish', 'new', Object(WP_Post))
+#7 C:\xampp\htdocs\fxbillio\wp-includes\post.php(4284): wp_transition_post_status('publish', 'new', Object(WP_Post))
+#8 C:\xampp\htdocs\fxbillio\wp-content\plugins\woocommerce\includes\admin\wc-admin-functions.php(127): wp_insert_post(Array)
+#9 C:\xampp\htdocs\fxbillio\wp-content\plugins\woocommerce\includes\class-wc-install.php(585): wc_create_page('shop', 'woocommerce_sho...', 'Shop', '', '')
+#10 C:\xampp\htdocs\fxbillio\wp-content\plugins\woocommerce\includes\class-wc-install.php(548): WC_Install::create_pages()
+#11 C:\xampp\htdocs\fxbillio\wp-content\plugins\woocommerce\includes\class-wc-install.php(311): WC_Install::maybe_create_pages()
+#12 C:\xampp\htdocs\fxbillio\wp-includes\class-wp-hook.php(292): WC_Install::install(false)
+#13 C:\xampp\htdocs\fxbillio\wp-includes\class-wp-hook.php(316): WP_Hook->apply_filters('', Array)
+#14 C:\xampp\htdocs\fxbillio\wp-includes\plugin.php(484): WP_Hook->do_action(Array)
+#15 C:\xampp\htdocs\fxbillio\wp-admin\includes\plugin.php(701): do_action('activate_woocom...', false)
+#16 C:\xampp\htdocs\fxbillio\wp-admin\plugins.php(58): activate_plugin('woocommerce/woo...', 'http://localhos...', false)
+#17 {main}
+  thrown in C:\xampp\htdocs\fxbillio\wp-content\plugins\reviewx\app\Controllers\Admin\Rating\ProductRating.php on line 65
+
